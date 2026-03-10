@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif ;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(#f5eeff, #e2d2f7);
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 450px;
+  background: #352163;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 30px 25px;
+  z-index: 1;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("C:\Users\WartoS\Desktop\weather-app\weather-app\src\assets\clouds.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  gap: 10px;
+}
+
+.search-form .material-symbols-rounded {
+  color: #555;
+  font-size: 24px;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  background: transparent;
+}
+
+.location-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  color: #352163;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s ease;
+}
+
+.location-button:hover {
+  background: #dac3f8; 
+}
+
+
+.weather-section {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current-weather .weather-icon {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.temperature {
+  font-size: 60px;
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.temperature span {
+  font-size: 24px;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.hourly-forecast .weather-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  overflow-x: auto; 
+  padding-bottom: 15px;
+}
+
+
+.hourly-forecast .weather-list::-webkit-scrollbar {
+  height: 6px;
+}
+.hourly-forecast .weather-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.weather-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 80px;
+}
+
+.weather-item .time {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.weather-item .weather-icon {
+  width: 40px;
+}
+
+.weather-item .temperature {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.temperature {
+  font-size: 20px;
+}
+
+.time {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.extra-details .weather-item {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3 ease;
+  margin-bottom: 20px;
+}
+
+.extra-details .weather-item :hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.background-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.8);
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.suggestion-card {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.suggestion-icon {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.suggestion-title {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin: 0;
+    font-weight: 900;
+}
+
+.suggestion-desc {
+    font-size: 16px;
+    margin: 3px 0 0;
+    line-height: 1.4;
+    font-weight: 400;
+}
